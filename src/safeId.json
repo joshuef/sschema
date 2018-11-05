@@ -1,0 +1,73 @@
+{
+    "@context": {
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfa": "http://www.w3.org/ns/rdfa#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "foaf": "http://xmlns.com/foaf/spec/#",
+   "schema": "http://schema.org/",
+   "safe" : "safe://some-safe-url/#",
+   "@type" : "safe://specific-url-where-this-was-published"
+    },
+    "@graph" : [
+        {
+            "@id": "schema:uri",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The xor url for the profile.",
+            "rdfs:label": "uri",
+            "schema:rangeIncludes": [
+               {
+                 "@id": "schema:URL"
+               },
+               {
+                 "@id": "schema:Text"
+               }
+             ],
+            "schema:sameAs": {
+                "@id": "https://schema.org/url"
+            }
+        },
+        {
+            "@id": "foaf:name",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The name of the entity.",
+            "rdfs:label": "name",
+            "schema:rangeIncludes":
+               {
+                 "@id": "schema:Text"
+               }
+        },
+        {
+            "@id": "foaf:nick",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The nickname of the entity.",
+            "rdfs:label": "nick",
+            "schema:rangeIncludes":
+               {
+                 "@id": "schema:Text"
+               }
+        },
+        {
+            "@id": "safe:website",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The main website for this entity.",
+            "rdfs:label": "website",
+            "schema:rangeIncludes": {
+                "@id": "schema:URL"
+            },
+            "schema:sameAs": {
+                "@id": "https://schema.org/url"
+            }
+        },
+        {
+            "@id": "schema:image",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The main image of the entity.",
+            "rdfs:label": "image",
+            "schema:rangeIncludes":
+               {
+                 "@id": "schema:ImageObject"
+               }
+        }
+        ]
+}

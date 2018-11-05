@@ -1,0 +1,49 @@
+{
+"@context": {
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfa": "http://www.w3.org/ns/rdfa#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "safe" : "safe://some-safe-url/#",
+   "@type" : "safe://schemaDefinition"
+    },
+    "@graph" : [
+        {
+            "@id": "schema:version",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The version of this map.",
+            "rdfs:label": "version",
+            "safe:defaultValue" : "1",
+            "schema:rangeIncludes": [
+               {
+                 "@id": "schema:Text"
+               }
+             ],
+            "schema:sameAs": {
+                "@id": "https://schema.org/version"
+            }
+        },
+        {
+            "@id": "safe:default",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The default entry to resolve if nothing else requested",
+            "rdfs:label": ":default",
+            "schema:rangeIncludes": {
+                "@id": "schema:URL"
+            },
+            "schema:sameAs": {
+                "@id": "https://schema.org/url"
+            }
+        },
+        {
+            "@id" : "safe:entriesList",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The list of entries to be resolved. A collection of simulated path to XOR-URI location mappings.",
+            "rdfs:label": "entriesList",
+            "schema:rangeIncludes": {
+                "@id": "schema:List"
+            }
+        }
+        ]
+}
