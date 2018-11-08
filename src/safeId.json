@@ -6,7 +6,7 @@
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "foaf": "http://xmlns.com/foaf/spec/#",
    "schema": "http://schema.org/",
-   "safe" : "safe://some-safe-url/#",
+   "safe" : "safe://some-safe-url/#"
     },
     "@type" : "safe://specific-url-where-this-was-published",
     "@graph" : [
