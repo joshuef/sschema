@@ -5,25 +5,12 @@
    "rdfa": "http://www.w3.org/ns/rdfa#",
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
-   "safe" : "safe://some-safe-url/#"
+   "safe" : "safe://some-safe-url-where-this-lives/#"
     },
-    "@type" : "safe://schemaDefinition",
-    "@graph" : [
-        {
-            "@id": "schema:version",
-            "@type": "rdf:Property",
-            "rdfs:comment": "The version of this map.",
-            "rdfs:label": "version",
-            "safe:defaultValue" : "1",
-            "schema:rangeIncludes": [
-               {
-                 "@id": "schema:Text"
-               }
-             ],
-            "schema:sameAs": {
-                "@id": "https://schema.org/version"
-            }
-        },
+    "@type" : "@vocab",
+    "@version" : 1,
+    "rdfs:comment": "A map of entries to be resolved. A collection of simulated path to XOR-URI location mappings.",
+    "@graph"  : [
         {
             "@id": "safe:default",
             "@type": "rdf:Property",
@@ -37,12 +24,12 @@
             }
         },
         {
-            "@id" : "safe:entriesList",
+            "@id" : "safe:uri",
             "@type": "rdf:Property",
-            "rdfs:comment": "The list of entries to be resolved. A collection of simulated path to XOR-URI location mappings.",
-            "rdfs:label": "entriesList",
+            "rdfs:label": "uri",
+            "rdfs:comment": "The url to resolve for this entry.",
             "schema:rangeIncludes": {
-                "@id": "schema:List"
+                "@id": "schema:URL"
             }
         }
         ]
