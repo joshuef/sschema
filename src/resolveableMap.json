@@ -6,8 +6,8 @@
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
    "safe" : "safe://some-safe-url/#",
-   "@type" : "safe://schemaDefinition"
     },
+    "@type" : "safe://schemaDefinition",
     "@graph" : [
         {
             "@id": "schema:version",

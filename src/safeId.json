@@ -7,8 +7,8 @@
    "foaf": "http://xmlns.com/foaf/spec/#",
    "schema": "http://schema.org/",
    "safe" : "safe://some-safe-url/#",
-   "@type" : "safe://specific-url-where-this-was-published"
     },
+    "@type" : "safe://specific-url-where-this-was-published",
     "@graph" : [
         {
             "@id": "schema:uri",
