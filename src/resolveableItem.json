@@ -9,19 +9,25 @@
     },
     "@type" : "@vocab",
     "@version" : 1,
-    "rdfs:comment": "A map of entries to be resolved. A collection of simulated path to XOR-URI location mappings.",
+    "rdfs:comment": "An item that can be resolved as part of the SAFE Network Public Name System",
     "@graph"  : [
         {
-            "@id": "safe:Default",
+            "@id" : "safe:target",
             "@type": "rdf:Property",
-            "rdfs:comment": "The default entry to resolve if nothing else requested",
-            "rdfs:label": "default",
+            "rdfs:label": "target",
+            "rdfs:comment": "The url to resolve for this entry.",
             "schema:rangeIncludes": {
                 "@id": "schema:URL"
-            },
-            "schema:sameAs": {
-                "@id": "https://schema.org/url"
+            }
+        },
+        {
+            "@id" : "safe:targetType",
+            "@type": "rdf:Property",
+            "rdfs:label": "targetType",
+            "rdfs:comment": "Type of the target resource",
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         }
-    ]
+        ]
 }

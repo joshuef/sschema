@@ -1,0 +1,60 @@
+{
+"@context": {
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfa": "http://www.w3.org/ns/rdfa#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "safe" : "https://raw.githubusercontent.com/joshuef/sschema/master/src/"
+    },
+    "@type" : "@vocab",
+    "@version" : 1,
+    "rdfs:comment": "A file item that can be resolved as part of the SAFE Network Public Name System",
+    "@graph"  : [
+        {
+            "@id" : "safe:target",
+            "@type": "rdf:Property",
+            "rdfs:label": "target",
+            "rdfs:comment": "The url to resolve for this entry.",
+            "schema:rangeIncludes": {
+                "@id": "schema:URL"
+            }
+        },
+        {
+            "@id" : "safe:size",
+            "@type": "rdf:Property",
+            "rdfs:label": "size",
+            "rdfs:comment": "The size of the file.",
+            "schema:rangeIncludes": {
+                "@id": "schema:Number"
+            }
+        },
+        {
+            "@id" : "safe:creationDate",
+            "@type": "rdf:Property",
+            "rdfs:label": "creationDate",
+            "rdfs:comment": "The date the file was created, UTC.",
+            "schema:rangeIncludes": {
+                "@id": "schema:Date"
+            }
+        },
+        {
+            "@id" : "safe:updatedDate",
+            "@type": "rdf:Property",
+            "rdfs:label": "updatedDate",
+            "rdfs:comment": "The date the file was updated, UTC.",
+            "schema:rangeIncludes": {
+                "@id": "schema:Date"
+            }
+        },
+        {
+            "@id" : "safe:targetType",
+            "@type": "rdf:Property",
+            "rdfs:label": "targetType",
+            "rdfs:comment": "Type of the target resource",
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        }
+        ]
+}
