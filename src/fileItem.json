@@ -55,6 +55,20 @@
             "schema:rangeIncludes": {
                 "@id": "schema:Text"
             }
+        },
+        {
+            "@id" : "safe:dependsUpon",
+            "@type": "rdf:Property",
+            "rdfs:label": "dependsUpon",
+            "rdfs:comment": "Resources which this may depend upon. (An application could optionally choose to fetch those in parallel)",
+            "schema:rangeIncludes": [
+               {
+                 "@id": "schema:URL"
+               },
+               {
+                 "@id": "schema:List"
+               }
+             ]
         }
         ]
 }
