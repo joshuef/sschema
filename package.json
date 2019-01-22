@@ -1,7 +1,7 @@
 {
   "name": "safe-schema",
   "version": "1.0.0",
-  "main": "./src",
+  "main": "./lib",
   "license": "MIT",
   "repository": {
     "type": "git",
